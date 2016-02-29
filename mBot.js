@@ -19,7 +19,7 @@ relogar: function(data){
 	API.off(API.CHAT);
      Msg("Relogando MBot...");
      setTimeout (function(){
-          API.moderateDeleteChat(data.chatID);
+          API.moderateDeleteChat(data.cid);
      }
      ,1600);
      setTimeout (function(){
@@ -35,7 +35,7 @@ desligar: function(data){
 	API.off(API.CHAT);
      Msg("Desligando MBot...");
      setTimeout (function(){
-          API.moderateDeleteChat(data.chatID);
+          API.moderateDeleteChat(data.cid);
      }
      ,1600);
 },
@@ -95,7 +95,7 @@ API.on(API.CHAT, function(data){
 		var res = data.message.trim().split(" ");
 		res[0] = res[0].substring(1).toLowerCase();
         if(data.message.trim().charAt(0) === '!'){
-		API.moderateDeleteChat(data.chatID);
+		API.moderateDeleteChat(data.cid);
 			
                 switch(res[0]){
 		
