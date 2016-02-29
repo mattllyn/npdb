@@ -13,7 +13,7 @@ MattB.status = {
        entradastaff: "on",
        listae: "-",
        ciclodj: "-",
-       cmdslink: "http://goo.gl/P2Go9n",
+       cmdslink: "site off...",
        fandel: "off",
        cargosdel: "on",
        historico: "on",
@@ -25,8 +25,7 @@ MattB.status = {
 
 MattB.joined = new Date().getTime();
 
-//                   Matt                         BOT2                    Evi                          Virtual
-MattB.adm = ["515a206a877b9272821f831e","5276ce143e083e5887749847","51e867ee3b79032ebc81e840","5196d49a3e083e7282ad3091"];
+MattB.adm = [""];
 
 MattB.relogar = function(data){
        API.off(API.USER_JOIN, StaffEntrou);
@@ -62,7 +61,7 @@ MattB.relogar = function(data){
        }
        ,1600);
        setTimeout (function(){
-              $.getScript("https://dl.dropboxusercontent.com/s/qg1a09vc8p5r690/Matt%20Bot.js");
+              $.getScript("https://rawgit.com/mattllyn/npdb/master/mBot.js");
        }
        , 1000);
 }
@@ -786,7 +785,7 @@ function Comandos(data) {
                             MattB.linkm(data);
                             break;
                      case "autowoot":
-                            API.sendChat("/em["+data.from+"] > [TUTORIAL] Auto-Woot >> http://goo.gl/mpByzP");
+                            API.sendChat("/em["+data.from+"] > Auto-Woot >> https://rcs.radiant.dj/install");
                             break;
                      case "rules":
                      case "themes":
