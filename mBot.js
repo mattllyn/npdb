@@ -41,13 +41,6 @@ MattB.relogar = function(data){
        API.off(API.USER_LEAVE, leave2);
        API.off(API.USER_JOIN, user2);
        API.off(API.CHAT, antilinks);
-       API.off(API.WAIT_LIST_UPDATE, autojj);
-       API.off(API.DJ_ADVANCE, DJ_ADVANCE_LISTENER);
-       API.off(API.USER_JOIN, UserJoin);
-       API.off(API.USER_LEAVE, left);
-       API.off(API.CURATE_UPDATE, grabs);
-       API.off(API.CHAT_COMMAND, cmdsbs);
-       API.off(API.CHAT, autoRespond3);
        //Games
        API.off(API.CHAT, GamesBot);
        API.off(API.CHAT,DialogBot);
