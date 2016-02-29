@@ -73,13 +73,6 @@ MattB.desligar = function(data){
        API.off(API.USER_LEAVE, leave2);
        API.off(API.USER_JOIN, user2);
        API.off(API.CHAT, antilinks);
-       API.off(API.WAIT_LIST_UPDATE, autojj);
-       API.off(API.DJ_ADVANCE, DJ_ADVANCE_LISTENER);
-       API.off(API.USER_JOIN, UserJoin);
-       API.off(API.USER_LEAVE, left);
-       API.off(API.CURATE_UPDATE, grabs);
-       API.off(API.CHAT_COMMAND, cmdsbs);
-       API.off(API.CHAT, autoRespond3);
        //Games
        API.off(API.CHAT, GamesBot);
        API.off(API.CHAT,DialogBot);
@@ -1204,14 +1197,6 @@ MattB.IniciarC = function(){
        API.on(API.USER_JOIN, rdjpromo);
        API.on(API.USER_LEAVE, leave2);
        API.on(API.USER_JOIN, user2);
-       // CMBS
-       API.on(API.WAIT_LIST_UPDATE, autojj);
-       API.on(API.DJ_ADVANCE, DJ_ADVANCE_LISTENER);
-       API.on(API.USER_JOIN, UserJoin);
-       API.on(API.USER_LEAVE, left);
-       API.on(API.CURATE_UPDATE, grabs);
-       API.on(API.CHAT_COMMAND, cmdsbs);
-       API.on(API.CHAT, autoRespond3);
        //Games
        API.on(API.CHAT, GamesBot);
        API.on(API.CHAT,DialogBot);
