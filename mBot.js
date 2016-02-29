@@ -19,7 +19,7 @@ relogar: function(data){
 	API.off(API.CHAT);
      Msg("Relogando MBot...");
      setTimeout (function(){
-          API.moderateDeleteChat(data.cid);
+          API.moderateDeleteChat(data.chatID);
      }
      ,1600);
      setTimeout (function(){
@@ -35,7 +35,7 @@ desligar: function(data){
 	API.off(API.CHAT);
      Msg("Desligando MBot...");
      setTimeout (function(){
-          API.moderateDeleteChat(data.cid);
+          API.moderateDeleteChat(data.chatID);
      }
      ,1600);
 },
@@ -49,7 +49,7 @@ f5: function(){
 limparchat:  function(){
 var currentchat = $('#chat-messages').children();
 for (var i = 0; i < currentchat.length; i++) {
-API.moderateDeleteChat(currentchat[i].getAttribute("data-cid"));							
+API.moderateDeleteChat(currentchat[i].getAttribute("data-chatID"));							
 }
 },
 pula:  function(){
@@ -88,15 +88,6 @@ function Msg(message) {
 	API.sendChat(message);
 }
 
-
-API.moderateDeleteChat = function (cid) {
-                $.ajax({
-                    url: "https://plug.dj/_/chat/" + cid,
-                    type: "DELETE"
-                })
-            };
-
-		
 API.on(API.CHAT, function(data){
         var msg = data.message;
 	    var ID = data.uid;
@@ -104,7 +95,7 @@ API.on(API.CHAT, function(data){
 		var res = data.message.trim().split(" ");
 		res[0] = res[0].substring(1).toLowerCase();
         if(data.message.trim().charAt(0) === '!'){
-		API.moderateDeleteChat(data.cid);
+		API.moderateDeleteChat(data.chatID);
 			
                 switch(res[0]){
 		
